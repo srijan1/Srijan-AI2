@@ -4,5 +4,14 @@ import react from '@vitejs/plugin-react';
 
 export default defineConfig({
   plugins: [react()],
-  base: '/srijan1/', // Replace 'repo-name' with your GitHub repository name
+  base: '/Srijan-AI2/',
+  build: {
+    outDir: 'dist',
+    assetsDir: 'assets',
+    rollupOptions: {
+      input: {
+        main: '/index.html',
+      },
+    },
+  },
 });
